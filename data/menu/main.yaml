@@ -10,6 +10,8 @@ main:
     ref: "build"
   - name: Basics
     ref: "basics"
+  - name: Best practices
+    ref: "best-practices"
   - name: Directives
     ref: "directives/"
     sub:
@@ -36,6 +38,8 @@ main:
         ref: "rxjs/subjects"
       - name: "Subscription"
         ref: "rxjs/subscription"
+      - name: Common uses cases
+        ref: "rxjs/common-use-cases"
       - name: "Operators"
         ref: "rxjs/operators/"
         sub:
