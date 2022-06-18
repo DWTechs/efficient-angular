@@ -32,12 +32,8 @@ main:
         ref: "rxjs/observables"
       - name: "Observer"
         ref: "rxjs/observer"
-      - name: "Subjects"
-        ref: "rxjs/subjects"
       - name: "Subscription"
         ref: "rxjs/subscription"
-      - name: Common uses cases
-        ref: "rxjs/common-use-cases"
       - name: "Operators"
         ref: "rxjs/operators/"
         sub:
@@ -103,8 +99,12 @@ main:
                 ref: "rxjs/operators/utility/tap"
               - name: "Delay"
                 ref: "rxjs/operators/utility/delay"
+      - name: "Subjects"
+        ref: "rxjs/subjects"
       - name: "Error handling"
         ref: "rxjs/error-handling"
+      - name: Common uses cases
+        ref: "rxjs/common-use-cases"
   - name: NgRX
     ref: "ngrx/"
     sub:

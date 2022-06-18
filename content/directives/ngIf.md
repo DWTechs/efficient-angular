@@ -23,7 +23,7 @@ let hide = false;
 ```
 
 HTML
-```angular
+```html
 <h2 [ngClass]="'not-displayed' : hide" class="building-text">Show this only if "show"</h2>
 <!-- hide = true -> not-displayed -> display: none -->
 ```
