@@ -2,8 +2,6 @@
 main:
   - name: What is Angular
     ref: "intro"
-  - name: Install
-    ref: "install"
   - name: CLI
     ref: "cli"
   - name: Build
