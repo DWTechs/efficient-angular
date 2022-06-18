@@ -5,44 +5,69 @@ permalink: /javascript/angular/cli/
 
 ---
 
-## Angular CLI : Scaffold generation
+## Angular CLI : Useful commands
 
 ### Create a feature module:
 
 Execute the command:
 
 ```bash
-ng generate module features/{feature-name} --module="app.module.ts" --routing
+ng generate module {module-name}
 ```
 
-### Create a page of feature
-
-Executer la commande :
+Shorter command:
 
 ```bash
-ng generate component features/{feature-name}/pages/{page-name}
+ng g m {module-name}
 ```
 
-### Create a component of feature
-
-Executer la commande :
-
+For example, you can create an AuthenticationModule like this:
 ```bash
-ng generate component features/{feature-name}/components/{component-name}
+ng generate module authentication
 ```
 
-### Create a service of feature
-
-Executer la commande :
+To automatically create a routing module with your new module, you can add `--routing=true`:
 
 ```bash
-ng generate service features/{feature-name}/shared/{service-name}
+ng g m {module-name} --routing=true
 ```
 
-### Create a model of feature
+### Create a component
 
-Executer la commande :
+Execute the command:
 
 ```bash
-ng generate class features/{feature-name}/shared/{model-name} --type=model
+ng generate component {module-directory-name}/{component-name}
+```
+
+Shorter command:
+
+```bash
+ng g c {module-directory-name}/{component-name}
+```
+
+For example, you can create a LoginComponent like this:
+
+```bash
+ng g c authentication/login
+```
+
+### Create a service
+
+Execute the command:
+
+```bash
+ng generate service {module-directory-name}/services/{service-name}
+```
+
+Shorter command:
+
+```bash
+ng g s {module-directory-name}/services/{service-name}
+```
+
+For example, you can create an AuthenticationService like this:
+
+```bash
+ng g s authentication/services/authentication
 ```

@@ -5,10 +5,6 @@ permalink: /javascript/angular/basics/
 
 ---
 
-## Learn NPM
-
-[https://www.npmjs.com/](https://www.npmjs.com/)
-
 ## Learn Typescript
 
 All the Angular code snippets you will find online are written in Typescript. It is important that developers master it and always type the variables and objects they are working with.
@@ -18,20 +14,20 @@ All the Angular code snippets you will find online are written in Typescript. It
 - variable name (camelCase):
 
 ```typescript
-let nameVariable: string;
+let variableName: string;
 ```
 
 - observable name (camelCase):
 
 ```typescript
-let nameObservable$: Observable<String>;
+let observableName$: Observable<String>;
 ```
 
-All variables must have a type
+All variables must have a type.
 
 ## Use environment variables
 
-The environment variables allow to modify the behavior of the application according to the environment. By default on angular, they are stored in the src/environments folder. This folder contains two files:
+The environment variables allow to modify the behavior of the application according to the environment. By default in Angular, they are stored in the src/environments folder. This folder contains two files:
 
 - environment.ts, which contains the variables for the **development** mode
 - environment.prod.ts, which contains the variables for the **production** mode.
@@ -66,17 +62,11 @@ A single Model can notify several Model Views of its change. Thus these Model Vi
 
 A component is a **reusable element** of the application, consisting of a view and a set of processes associated with this view. As shown in the code below, it is a class that exposes a view and defines the way the user can interact with it.
 
-The component thus brings together the view and the associated business logic within the same entity. This is a fundamental difference with AngularJS where the two logics are clearly separated and the business logic contained in the controller.
-
-Many similarities exist between Angular 2 components and AngularJS directives. Indeed, AngularJS directives also contain a view and associated processing. However, the Angular 2 components are independent.
-
-Angular 2 therefore simplifies the architecture of an AngularJS application, by gathering in a single entity the concepts of controller, scope and view: the component.
-
-The directives still exist but they no longer contain a template and only allow you to remove or associate a particular behavior to a DOM element. Example: ngIf, ngFor
+The component thus brings together the view and the associated business logic within the same entity.
 
 ## Think Components
 
-The components are the **keystone** of Angular. Think about your component before you start development: the list of questions to answer before developing a new component can be found in the `"development > Practices"` section.
+The components are the **keystone** of Angular. Think about your component before you start development.
 
 Make the components small enough to be reusable elsewhere in the application, but don't oversize them because too small components only make the code more complex. It takes some experience and common sense to group components logically, but it quickly becomes natural.
 
@@ -98,4 +88,4 @@ We encourage the use of the **code-driven** approach, more verbose but more powe
 
 ## Use Services
 
-Put all the logic into services. The model view should only contain code that is useful to the view
+Put all the logic into services. The model view should only contain code that is useful to the view.

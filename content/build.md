@@ -43,13 +43,7 @@ the configuration of the application is defined in **angular.json** where we wil
 - Build an application for production :
 
 ```bash
-$ ng build --prod
-```
-
-- Build for an environment (configuration)
-
-```bash
-$ ng build --configuration=pre-prod
+$ ng build --configuration=production
 ```
 
 - Build an application with internationalisation options :
