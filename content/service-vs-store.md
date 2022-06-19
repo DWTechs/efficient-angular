@@ -1,5 +1,0 @@
----
-title: Service versus Stàre
----
-
-

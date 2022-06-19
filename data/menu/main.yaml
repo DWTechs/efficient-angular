@@ -126,5 +126,6 @@ main:
             ref: "ngrx/effects/install"
           - name: "Overview" 
             ref: "ngrx/effects/overview"
-  
+  - name: Service or Store
+    ref: "service-or-store"
   
