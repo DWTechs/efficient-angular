@@ -130,7 +130,7 @@ export class AppComponent implements OnInit {
 
 We can see Angular rebuilds the DOM at each refresh.
 
-![Without-Track-By](/assets/images/angular/before-track-by.gif "Without trackBy")
+![Without-Track-By](../../img/before-track-by.gif "Without trackBy")
 
 Now let's add `trackBy`:
 
@@ -179,4 +179,4 @@ export class AppComponent implements OnInit {
 
 Now, even when the collection changes, Angular can track which item has been inserted or deleted according to their unique identifier provided by the trackBy, and destroy only the items that changed.
 
-![With-Track-By](/assets/images/angular/after-track-by.gif "With trackBy")
+![With-Track-By](../../img/after-track-by.gif "With trackBy")
