@@ -1,13 +1,6 @@
 ---
-layout: default
 title: Of
-permalink: /javascript/rxjs/operators/creation/of/
-
 ---
-
-Previous : [Operators](../../operators.md)
-
-# Of
 
 Converts the arguments to an observable sequence.
 

@@ -4,6 +4,3 @@ title: Selectors
 permalink: /javascript/ngrx/selectors/
 
 ---
-
-
-# Installation

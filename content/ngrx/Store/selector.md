@@ -1,6 +1,3 @@
 ---
-layout: default
-title: Creating observables
-permalink: /javascript/ngrx/store/selector/
-
+title: Selector
 ---

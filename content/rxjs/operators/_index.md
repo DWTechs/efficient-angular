@@ -1,11 +1,9 @@
 ---
 layout: default
-title: Operator
+title: Operators
 permalink: /javascript/rxjs/operator/
 
 ---
-
-# Operators
 
 Allow complex asynchronous code to be easily composed in a declarative manner (functional programming).
 

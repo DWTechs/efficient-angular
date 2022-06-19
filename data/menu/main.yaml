@@ -2,12 +2,10 @@
 main:
   - name: What is Angular
     ref: "intro"
-  - name: CLI
-    ref: "cli"
-  - name: Build
-    ref: "build"
   - name: Basics
     ref: "basics"
+  - name: CLI
+    ref: "cli"
   - name: Best practices
     ref: "best-practices"
   - name: Directives
@@ -38,7 +36,6 @@ main:
         ref: "rxjs/operators/"
         sub:
           - name: "Creation"
-            ref: "rxjs/operators/creation"
             sub:
               - name: "Of"
                 ref: "rxjs/operators/creation/of"
@@ -47,7 +44,6 @@ main:
               - name: "FromEvent"
                 ref: "rxjs/operators/creation/from-event"
           - name: "Filtering"
-            ref: "rxjs/operators/filtering"
             sub:
               - name: "Debounce-time"
                 ref: "rxjs/operators/filtering/debounce-time"
@@ -70,7 +66,6 @@ main:
               - name: "Take-while"
                 ref: "rxjs/operators/filtering/take-while"
           - name: "Join"
-            ref: "rxjs/operators/join"
             sub:
               - name: "Concat-with"
                 ref: "rxjs/operators/join/concat-with"
@@ -79,21 +74,18 @@ main:
               - name: "Combine-latest-all"
                 ref: "rxjs/operators/join/combine-latest-all"
           - name: "Join-creation"
-            ref: "rxjs/operators/join-creation"
             sub:
               - name: "Concat"
                 ref: "rxjs/operators/join-creation/concat"
               - name: "Combine-latest"
                 ref: "rxjs/operators/join-creation/combine-latest"
           - name: "Transformation"
-            ref: "rxjs/operators/transformation"
             sub:
               - name: "Map"
                 ref: "rxjs/operators/transformation/map"
               - name: "Switch-map"
                 ref: "rxjs/operators/transformation/switch-map"
           - name: "Utility"
-            ref: "rxjs/operators/utility"
             sub:
               - name: "Tap"
                 ref: "rxjs/operators/utility/tap"

@@ -1,13 +1,6 @@
 ---
-layout: default
 title: First
-permalink: /javascript/rxjs/operators/filtering/first/
-
 ---
-
-Previous : [Operators](../../operators.md)
-
-# First
 
 Emits only the first value (or the first value that meets some condition) emitted by the source Observable.
 

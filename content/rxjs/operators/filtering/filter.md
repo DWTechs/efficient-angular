@@ -1,13 +1,6 @@
 ---
-layout: default
 title: Filter
-permalink: /javascript/rxjs/operators/filtering/filter/
-
 ---
-
-Previous : [Operators](../../operators.md)
-
-# Filter 
 
 Filter items emitted by the source Observable by only emitting those that satisfy a specified predicate.
 

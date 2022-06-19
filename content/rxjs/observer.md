@@ -1,12 +1,9 @@
 ---
 layout: default
-title: Creating observables
+title: Observer
 permalink: /javascript/rxjs/observer/
 
 ---
-
-
-# Observer
 
 A consumer of values delivered by an Observable. Observers are simply a set of callbacks, one for each type of notification delivered by the Observable: next, error, and complete. The following is an example of a typical Observer object:
 

@@ -1,14 +1,6 @@
 ---
-layout: default
 title: CombineLatest
-permalink: /javascript/rxjs/operators/joincreation/combinelatest/
-
 ---
-
-Previous : [Operators](../../operators.md)
-
-
-# CombineLatest
 
 Combines multiple Observables to create an Observable whose values are calculated from the latest values of each of its input Observables.
 

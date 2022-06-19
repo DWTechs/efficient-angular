@@ -1,13 +1,6 @@
 ---
-layout: default
 title: TakeUntil
-permalink: /javascript/rxjs/operators/filtering/takeuntil/
-
 ---
-
-Previous : [Operators](../../operators.md)
-
-# TakeUntil
 
 Emits the values emitted by the source Observable until a notifier Observable emits a value.
 

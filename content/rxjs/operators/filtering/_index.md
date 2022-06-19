@@ -1,8 +1,5 @@
 ---
-layout: default
 title: Filtering
-permalink: /javascript/rxjs/operators/filtering/
-
 ---
 
 # Observables

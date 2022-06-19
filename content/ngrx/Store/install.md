@@ -1,12 +1,6 @@
 ---
-layout: default
-title: Creating observables
-permalink: /javascript/ngrx/store/install/
-
+title: Installation
 ---
-
-
-# Installation
 
 ## Installing with npm
 ```console

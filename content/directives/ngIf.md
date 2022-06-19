@@ -1,12 +1,6 @@
 ---
-layout: default
-title: ngIf
-permalink: /javascript/angular/directives/ngif/
-
+title: "*ngIf"
 ---
-
-
-# *ngIf
 
 This directive allows you to hide an element according to the associated expression..<br/>
 It removes or adds the element in the DOM.

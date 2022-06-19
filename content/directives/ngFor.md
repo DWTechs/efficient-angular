@@ -1,12 +1,7 @@
 ---
-layout: default
-title: ngFor
-permalink: /javascript/angular/directives/ngfor/
-
+title: "*ngFor"
 ---
 
-
-# *ngFor
 
 The structural directive ngFor allows you to loop over an array and inject the elements into the DOM.
 

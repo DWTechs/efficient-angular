@@ -5,8 +5,6 @@ permalink: /javascript/rxjs/errorhandling/
 
 ---
 
-
-# Error handling
 You handle errors by specifying an error callback on the observer. Producing an error also causes the observable to clean up subscriptions and stop producing values.
 
 ```javascript

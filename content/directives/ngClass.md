@@ -1,12 +1,6 @@
 ---
-layout: default
-title: ngClass
-permalink: /javascript/angular/directives/ngclass/
-
+title: "*ngClass"
 ---
-
-
-# ngClass
 
 
 Allows you to add and remove CSS classes on an HTML element.

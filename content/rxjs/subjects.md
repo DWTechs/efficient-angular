@@ -1,12 +1,9 @@
 ---
 layout: default
-title: BehaviorSubject
+title: Subjects
 permalink: /javascript/rxjs/subjects/
 
 ---
-
-
-# Subjects
 
 It is the big thing of RxJS as it gives multicast abilities to observables.
 

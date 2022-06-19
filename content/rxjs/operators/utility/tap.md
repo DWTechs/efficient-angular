@@ -1,13 +1,6 @@
 ---
-layout: default
 title: Tap
-permalink: /javascript/rxjs/operators/utility/tap/
-
 ---
-
-Previous : [Operators](../../operators.md)
-
-# Tap
 
 Used to perform side-effects for notifications from the source observable
 

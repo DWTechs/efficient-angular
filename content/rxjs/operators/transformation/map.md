@@ -1,13 +1,6 @@
 ---
-layout: default
 title: Map
-permalink: /javascript/rxjs/operators/transformation/map/
-
 ---
-
-Previous : [Operators](../../operators.md)
-
-# Map
 
 Applies a given project function to each value emitted by the source Observable, and emits the resulting values as an Observable.
 

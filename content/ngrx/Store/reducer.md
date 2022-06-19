@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Creating observables
+title: Reducer
 permalink: /javascript/ngrx/store/reducer/
 
 ---

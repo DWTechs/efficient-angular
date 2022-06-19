@@ -1,13 +1,6 @@
 ---
-layout: default
 title: Debounce
-permalink: /javascript/rxjs/operators/filtering/debounce/
-
 ---
-
-Previous : [Operators](../../operators.md)
-
-# Debounce
 
 Emits a notification from the source Observable only after a particular time span determined by another Observable has passed without another source emission.
 

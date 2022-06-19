@@ -1,8 +1,5 @@
 ---
-layout: default
 title: Creation
-permalink: /javascript/rxjs/operators/creation/
-
 ---
 
 # Observables

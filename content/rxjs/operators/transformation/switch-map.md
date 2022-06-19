@@ -1,13 +1,7 @@
 ---
-layout: default
 title: SwitchMap
-permalink: /javascript/rxjs/operators/transformation/switchmap/
 
 ---
-
-Previous : [Operators](../../operators.md)
-
-# SwitchMap
 
 Projects each source value to an Observable which is merged in the output Observable, emitting values only from the most recently projected Observable.
 

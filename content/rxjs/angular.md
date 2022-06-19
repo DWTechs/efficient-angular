@@ -1,15 +1,6 @@
 ---
-layout: default
 title: Angular
-permalink: /javascript/rxjs/angular/
-
 ---
-
-Previous : [Table of Contents](./index.md)
-
-
-# Angular
-
 
 Angular makes use of observables as an interface to handle a variety of common asynchronous operations.
 

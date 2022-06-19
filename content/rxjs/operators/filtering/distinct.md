@@ -1,14 +1,6 @@
 ---
-layout: default
 title: Distinct
-permalink: /javascript/rxjs/operators/filtering/distinct/
-
 ---
-
-Previous : [Operators](../../operators.md)
-
-
-# Distinct
 
 Returns an Observable that emits all items emitted by the source Observable that are distinct by comparison from previous items.
 

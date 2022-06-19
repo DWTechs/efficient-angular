@@ -1,14 +1,6 @@
 ---
-layout: default
 title: TakeWhile
-permalink: /javascript/rxjs/operators/filtering/takewhile/
-
 ---
-
-Previous : [Operators](../../operators.md)
-
-
-# TakeWhile
 
 Emits values emitted by the source Observable so long as each value satisfies the given predicate, and then completes as soon as this predicate is not satisfied.
 

@@ -1,13 +1,6 @@
 ---
-layout: default
 title: DistinctUntilChanged
-permalink: /javascript/rxjs/operators/filtering/distinctuntilchanged/
-
 ---
-
-Previous : [Operators](../../operators.md)
-
-# DistinctUntilChanged
 
 Only emit when the current value is different than the last.
 

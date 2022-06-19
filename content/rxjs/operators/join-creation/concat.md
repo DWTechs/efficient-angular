@@ -1,14 +1,6 @@
 ---
-layout: default
 title: Concat
-permalink: /javascript/rxjs/operators/joincreation/concat/
-
 ---
-
-Previous : [Operators](../../operators.md)
-
-
-# Concat
 
 Creates an output Observable which sequentially emits all values from the first given Observable and then moves on to the next.
 

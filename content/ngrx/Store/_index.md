@@ -1,8 +1,6 @@
 ---
 layout: default
-title: NgRx
+title: Stores
 permalink: /javascript/ngrx/store/
 
 ---
-
-# Stores

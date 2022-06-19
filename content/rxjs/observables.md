@@ -1,14 +1,11 @@
 ---
 layout: default
-title: Creating observables
+title: Observables
 permalink: /javascript/rxjs/observables/
 
 ---
 
-
-# Observables 
-
-A lazy Push collections of multiple values.
+An observable is lazy Push collections of multiple values.
 It can be compared to other concepts like this :
 
 |        | SINGLE	  | MULTIPLE       |

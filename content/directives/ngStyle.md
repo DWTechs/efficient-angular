@@ -1,12 +1,6 @@
 ---
-layout: default
-title: ngStyle
-permalink: /javascript/angular/directives/ngstyle/
-
+title: "*ngStyle"
 ---
-
-
-# ngStyle
 
 The NgStyle directive lets you set a given DOM elements style properties.
 

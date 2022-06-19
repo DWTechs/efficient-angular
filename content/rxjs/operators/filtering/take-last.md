@@ -1,13 +1,6 @@
 ---
-layout: default
 title: TakeLast
-permalink: /javascript/rxjs/operators/filtering/takelast/
-
 ---
-
-Previous : [Operators](../../operators.md)
-
-# TakeLast
 
 Waits for the source to complete, then emits the last N values from the source, as specified by the count argument.
 

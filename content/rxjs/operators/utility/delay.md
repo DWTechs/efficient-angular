@@ -1,13 +1,6 @@
 ---
-layout: default
 title: Delay
-permalink: /javascript/rxjs/operators/utility/delay/
-
 ---
-
-Previous : [Operators](../../operators.md)
-
-# Delay
 
 Delays the emission of items from the source Observable by a given timeout or until a given Date.
 

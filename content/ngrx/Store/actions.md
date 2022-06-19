@@ -1,12 +1,6 @@
 ---
-layout: default
-title: Creating observables
-permalink: /javascript/ngrx/store/actions/
-
+title: Actions
 ---
-
-
-# Actions
 
 Actions are one of the main building blocks in NgRx. Actions express unique events that happen throughout your application. From user interaction with the page, external interaction through network requests, and direct interaction with device APIs, these and more events are described with actions.
 
