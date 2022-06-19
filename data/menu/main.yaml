@@ -126,6 +126,8 @@ main:
             ref: "ngrx/effects/install"
           - name: "Overview" 
             ref: "ngrx/effects/overview"
+  - name: Change Detection Strategy
+    ref: "change-detection-strategy"
   - name: Service or Store
     ref: "service-or-store"
   
