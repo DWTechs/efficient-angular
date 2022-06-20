@@ -98,7 +98,7 @@ get totalGuests(): number {
 Write this:
 
 ```html
-<h1>{{ title }}</p>
+<h1>{{ title }}</h1>
 ```
 
 And update title in the controller when needed (maybe on the ngOnChanges lifecycle hook if it is an @Input, or on the ngOnInit if it never changes, or in some specific methods if necessary...). Doing so, we assure that the template rendering won't be slowed down by a function being executed all the time.
