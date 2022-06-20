@@ -24,7 +24,7 @@ let variableName: string;
 - observable name (camelCase):
 
 ```typescript
-let observableName$: Observable<String>;
+let observableName$: Observable<string>;
 ```
 
 All variables must have a type.
