@@ -8,6 +8,8 @@ main:
     ref: "cli"
   - name: Best practices
     ref: "best-practices"
+  - name: Routing
+    ref: "routing"
   - name: Directives
     ref: "directives/"
     sub:
