@@ -11,9 +11,9 @@ Modules are a great way to organize an application and extend it with capabiliti
 An NgModule is a class marked by the **@NgModule** decorator. **@NgModule** takes a metadata object that describes how to compile a component's template and how to create an injector at runtime. It identifies the module's own components, directives, and pipes, making some of them public, through the **exports** property, so that external components can use them.  **@NgModule** can also add service providers to the application dependency injectors.
 
 ## How to Create NgModules?
-1. Firstly , we will import ‘NgModules’ from ‘@angular/core’.
+1. Firstly , we will import *NgModules* from *@angular/core*.
 2. Once imported, the decorator can be used to declare all the components and services used by that particular module.
-3. And finally, we will be export the module using ‘export’ keyword which can be used by other modules.
+3. And finally, we will export the module using *export* keyword which can be used by other modules.
 ```typescript
 import { NgModule } from "@angular/core";
 
