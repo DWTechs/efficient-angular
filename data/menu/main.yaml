@@ -8,6 +8,8 @@ main:
     ref: "cli"
   - name: Best practices
     ref: "best-practices"
+  - name: Component lifecycle
+    ref: "component-lifecycle"
   - name: Modules
     ref: "modules"
   - name: Routing
