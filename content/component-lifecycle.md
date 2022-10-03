@@ -9,7 +9,7 @@ A component instance has a lifecycle that starts when Angular instantiates the c
 For controlling the components within Angular, the developers can use the hook events at different phases of the application. Eight types of lifecycle hook events are present which the developers can use in any of the components of the angular. The function call corresponding to the specific lifecycle event has to be added by the developer. 
 
 ## Lifecycle hooks
-After instanting a component or directive by calling its **constructor**, Angular calls the hook methods you have implemented at the appropriate point in the lifecycle of that instance.
+After application instantiates a component or directive by calling its **constructor**, Angular calls the hook methods you have implemented at the appropriate point in the lifecycle of that instance.
 
 Angular executes hook methods in the following sequence. Use them to perform the following kinds of operations.
 
