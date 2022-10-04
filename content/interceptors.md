@@ -52,6 +52,47 @@ An important detail is that interceptors are applied in the order they are provi
 
 For example, in the previous snippet, the order of processing for requests is: **LogInterceptor > CacheInterceptor > AuthInterceptor > MockInterceptor**, while the order of processing for responses is the opposite: **MockInterceptor > AuthInterceptor > CacheInterceptor > LogInterceptor**.
 
+## Example
+
+Apps often use an interceptor to set default headers on outgoing requests.
+
+Here is its **AuthInterceptor** that injects that service to get the token and adds an authorization header with that token to every outgoing request:
+
+```typescript
+@Injectable()
+export class AuthInterceptor implements HttpInterceptor {
+
+  constructor() {}
+
+  intercept(req: HttpRequest<any>, next: HttpHandler) {
+    const authToken = 'auth-token';
+
+    // Clone the request and replace the original headers with
+    // cloned headers, updated with the authorization.
+    const authReq = req.clone({
+      headers: req.headers.set('Authorization', authToken)
+    });
+
+    // send cloned request with header to the next handler.
+    return next.handle(authReq);
+  }
+}
+```
+The practice of cloning a request to set new headers is so common that there's a setHeaders shortcut for it:
+```typescript
+// Clone the request and set the new header in one step.
+const authReq = req.clone({ setHeaders: { Authorization: authToken } });
+```
+Register created interceptor:
+```typescript
+@NgModule({
+  // ...
+  providers: [ 
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
+  ],
+})
+export class AppModule { }
+```
 ## Useful links
 - [Complete guide with an example](https://javascript.plainenglish.io/angular-interceptors-a-complete-guide-7294e2317ecf)
 - [Http guide](https://angular.io/guide/http#intercepting-requests-and-responses) 
