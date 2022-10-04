@@ -25,6 +25,8 @@ main:
         ref: "directives/ngClass"
       - name: "NgStyle"
         ref: "directives/ngStyle"
+  - name: Interceptors
+    ref: "interceptors"
   - name: RxJS
     ref: "rxjs/"
     sub:
