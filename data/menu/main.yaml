@@ -25,6 +25,8 @@ main:
         ref: "directives/ngClass"
       - name: "NgStyle"
         ref: "directives/ngStyle"
+  - name: Reactive forms
+    ref: "reactive-forms"
   - name: API
     sub:
       - name: HttpClient
