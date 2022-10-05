@@ -24,45 +24,151 @@ export class AppModule { }
 
 In Angular, form controls are classes that can hold both the data values and the validation information of any form element. Every form input we have in a reactive form should be bound by a **FormControl**. These are the basic units that make up reactive forms.
 
-## Example
+## FormControl
+**FormControl** is a class in Angular that tracks the value and validation status of an individual form control. One of the three essential building blocks in Angular forms — along with **FormGroup** and **FormArray** — **FormControl** extends the *AbstractControl* class, which enables it to access the value, validation status, user interactions, and events.
 
-To see how this works, navigate to the user.component.ts file and paste in the code block below:
+## FormGroup
+**FormGroup** is used with **FormControl** to track the value and validate the state of form control. In practice, **FormGroup** aggregates the values of each child **FormControl** into a single object, using each control name as the key. It calculates its status by reducing the status values of its children so that if one control in a group is invalid, the entire group is rendered invalid.
+
+## Example
+Let's create a simple user registration form and implement some inbuilt validations on it. Along with the inbuilt validations, we will also implement some custom validations to the reactive form.
+
+**app.component.html**
+```html
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 mx-auto">
+      <div class="card">
+        <div class="card-header">
+          <h3>Angular Reactive Form</h3>
+        </div>
+        <div class="card-body">
+          <form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+              <input type="text"
+                class="form-control"
+                placeholder="Name"
+                formControlName="name">
+              <span class="text-danger"
+                *ngIf="(form.get('name').touched || submitted) && form.get('name').errors?.required">
+                Name is required
+              </span>
+            </div>
+            <div class="form-group">
+              <input type="text"
+                class="form-control"
+                placeholder="Email"
+                formControlName="email">
+              <span class="text-danger"
+                *ngIf="(form.get('email').touched || submitted) && form.get('email').errors?.required">
+                Email is required
+              </span>
+              <span class="text-danger"
+                *ngIf="form.get('email').touched && form.get('email').errors?.email">
+                Enter a valid email address
+              </span>
+            </div>
+            <div class="form-group">
+              <input type="text"
+                class="form-control"
+                placeholder="User Name"
+                formControlName="username">
+              <span class="text-danger"
+                *ngIf="(form.get('username').touched || submitted) && form.get('username').errors?.required">
+                User Name is required
+              </span>
+              <span class="text-danger"
+                *ngIf="form.get('username').touched && form.get('username').errors?.userNameNotAvailable">
+                User Name is not available
+              </span>
+            </div>
+            <div class="form-group">
+              <input type="password"
+                class="form-control"
+                placeholder="Password"
+                formControlName="password">
+              <span class="text-danger"
+                *ngIf="(form.get('password').touched || submitted) && form.get('password').errors?.required">
+                Password is required
+              </span>
+              <span class="text-danger"
+                *ngIf="form.get('password').touched && form.get('password').errors?.invalidPassword">
+                Password should have minimum 8 characters, at least 1 uppercase letter, 1 lowercase
+                letter and 1 number
+              </span>
+            </div>
+            <div class="form-group">
+              <input type="password"
+                class="form-control"
+                placeholder="Confirm Password"
+                formControlName="confirmPassword">
+              <span class="text-danger"
+                *ngIf="(form.get('confirmPassword').touched || submitted)&& form.get('confirmPassword').errors?.required">
+                Confirm Password is required
+              </span>
+              <span class="text-danger"
+                *ngIf="form.get('confirmPassword').touched && form.hasError('password-confirmation')">
+                Passwords doesn't match
+              </span>
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-success">Register</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+```
+**app.component.ts**
+
 ```typescript
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms'
+import { Validators, ValidatorFn,FormGroup, FormControl } from '@angular/forms';
 
 @Component({
-  selector: 'app-user',
-  templateUrl: './user.component.html',
-  styleUrls: ['./user.component.css']
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
-export class UserComponent implements OnInit {
-    infoSection = new FormGroup({
-        name: new FormControl(''),
-        email: new FormControl(''),
-    });
+export class AppComponent implements OnInit {
+  submitted = false;
+  form = new FormGroup({
+    name: new FormControl('', Validators.required),
+    email: new FormControl('', Validators.compose([Validators.required, Validators.email])),
+    username: new FormControl('', Validators.required),
+    password: new FormControl('', Validators.compose([Validators.required, this.patternValidator()])),
+    confirmPassword: new FormControl('', Validators.required)
+  }, this.matchPassword)
 
-    constructor() { }
-
-    ngOnInit() {
+  onSubmit() {
+    this.submitted = true;
+    if (this.form.valid) {
+      alert('Form Submitted succesfully!!!\n Check the values in browser console.');
+      console.table(this.form.value);
     }
+  }
 
-    onSubmit() { }
+  patternValidator(): ValidatorFn {
+    return (control: FormControl): { [key: string]: any } => {
+      if (!control.value) {
+        return null;
+      }
+      const regex = new RegExp('^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$');
+      const valid = regex.test(control.value);
+      return valid ? null : { invalidPassword: true };
+    };
+  }
+
+  matchPassword(control: FormGroup) {
+    const password = control.get('password');
+    const confirmation = control.get('confirmPassword');
+    if (!password || !confirmation || password.value === confirmation.value) {
+      return null;
+    }
+    return { 'password-confirmation': true };
+  }  
 }
 ```
-Here the form group was both imported and initialized to group together some form controls that compose the info section of the form. To reflect this group, we have to associate the model to the view with the form group name, like this:
-```typescript
-<form [formGroup]="infoSection" (ngSubmit)="onSubmit()">
-   <label>
-        Name:
-        <input type="text" formControlName="name">
-   </label>
-    <label>
-        Email:
-        <input type="text" formControlName="email">
-    </label>
-    <button type="submit">Submit</button>
-</form>
-```
-
-Validation
+![Reactive form example](../img/reactive-form.png)
