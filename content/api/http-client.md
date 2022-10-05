@@ -11,7 +11,7 @@ Start by importing the HttpClientModule module from the @angular/common/http pac
 ```typescript
 import { HttpClientModule } from '@angular/common/http';
 ```
-Next, add the HttpClientModule module to the imports array of the AppModule:
+Next, add the HttpClientModule to the imports array of the AppModule:
 ```typescript
 @NgModule({
   imports: [
